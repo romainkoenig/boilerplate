@@ -1,0 +1,14 @@
+@base_url = localhost:3000
+
+###
+
+POST /api/statements/ HTTP/1.1
+Host: {{base_url}}
+Content-Type: application/json
+
+{
+    "name": "Salaire",
+    "timestamp": "2024-02-14T09:30:00Z",
+    "amount_in_cents": 100000,
+    "type": "bancaire"
+}

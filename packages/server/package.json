@@ -1,0 +1,63 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "A simple server",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/modules/server/server.mjs | pino-pretty",
+    "lint": "eslint src/**/*.mjs && eslint test/**/*.mjs",
+    "lint:fix": "eslint src/**/*.mjs --fix && eslint test/**/*.mjs --fix",
+    "start": "node src/modules/server/server.mjs",
+    "test": "node --test --test-reporter dot src/**/*.test.mjs && node --test --test-reporter dot test/int/**/*.test.mjs && NODE_ENV=test node --test --test-reporter dot test/e2e/**/*.test.mjs && npm run test:deps",
+    "test:all": "npm run test:unit && npm run test:int && NODE_ENV=test npm run test:e2e && npm run test:deps",
+    "test:unit": "node --test src/**/*.test.mjs",
+    "test:unit:coverage": "node --test --experimental-test-coverage src/**/*.test.mjs",
+    "test:unit:watch": "node --watch --test src/**/*.test.mjs",
+    "test:int": "NODE_ENV=test node --test --test-reporter spec test/int/**/*.test.mjs",
+    "test:int:coverage": "NODE_ENV=test node --test --experimental-test-coverage test/int/**/*.test.mjs",
+    "test:int:watch": "NODE_ENV=test node --watch --test test/int/**/*.test.mjs",
+    "test:e2e": "NODE_ENV=test node --test --test-reporter spec test/e2e/**/*.test.mjs",
+    "test:e2e:coverage": "NODE_ENV=test node --test --experimental-test-coverage test/e2e/**/*.test.mjs",
+    "test:e2e:watch": "NODE_ENV=test node --watch --test test/e2e/**/*.test.mjs",
+    "test:deps": "npx depcruise src",
+    "deps:graph": "npx depcruise src --include-only '^src' --output-type dot | dot -T svg > dependency-graph.svg"
+  },
+  "devDependencies": {
+    "dependency-cruiser": "16.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-n": "17.2.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-simple-import-sort": "12.0.0",
+    "pino-pretty": "11.0.0",
+    "prettier": "3.2.5"
+  },
+  "dependencies": {
+    "@clerk/fastify": "^2.2.23",
+    "@fastify/cors": "^11.0.1",
+    "@fastify/helmet": "^13.0.1",
+    "@fastify/sensible": "^6.0.3",
+    "ajv": "8.12.0",
+    "ajv-formats": "2.1.1",
+    "convict": "6.2.4",
+    "dotenv": "16.4.5",
+    "fastify": "^5.0.0",
+    "fastify-plugin": "^4.5.1",
+    "firebase": "10.11.0",
+    "firebase-admin": "12.0.0",
+    "lodash": "4.17.21",
+    "mongodb": "^6.8.0",
+    "pino": "^9.4.0",
+    "uuid": "^10.0.0"
+  },
+  "engines": {
+    "node": ">=24.1.0"
+  },
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}

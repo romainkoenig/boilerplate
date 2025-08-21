@@ -1,0 +1,70 @@
+{
+  "targetDefaults": {
+    "dev": {
+      "dependsOn": []
+    },
+    "lint": {
+      "cache": true,
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "start": {
+      "dependsOn": []
+    },
+    "test": {
+      "cache": true,
+      "dependsOn": [
+        "^test"
+      ]
+    },
+    "test:all": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:unit": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:unit:coverage": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:unit:watch": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:int": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:int:coverage": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:int:watch": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:e2e": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:e2e:coverage": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:e2e:watch": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "test:deps": {
+      "cache": true,
+      "dependsOn": []
+    },
+    "deps:graph": {
+      "cache": true,
+      "dependsOn": []
+    }
+  }
+}

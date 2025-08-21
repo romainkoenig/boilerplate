@@ -1,0 +1,8 @@
+@base_url = localhost:3000
+
+###
+
+DELETE /api/statements/670d37dcb60786f620fb7bc3 HTTP/1.1
+Host: {{base_url}}
+Content-Type: application/json
+

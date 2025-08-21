@@ -1,0 +1,7 @@
+@base_url = localhost:3000
+
+###
+
+GET /api/statements/ HTTP/1.1
+Host: {{base_url}}
+Content-Type: application/json

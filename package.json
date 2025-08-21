@@ -1,0 +1,20 @@
+{
+  "name": "monorepo",
+  "version": "1.0.0",
+  "description": "Monorepo to handle all my apps and libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Romain Koenig",
+  "license": "ISC",
+  "workspaces": [
+    "packages/server",
+    "packages/client-react"
+  ],
+  "devDependencies": {
+    "fastify-overview": "^4.0.0",
+    "lerna": "^8.1.2",
+    "vite": "^4.5.14"
+  }
+}
